@@ -17,7 +17,7 @@ printing_services = 'https://it.semo.edu/TDClient/93/IT/Home/?ID=61c268bd-6cfb-4
 # For Recreational Center
 driver.get(rec_url)
 sleep(2)
-element = driver.find_element(By.CSS_SELECTOR,'.wysiwyg_block_inner')
+element = driver.find_element(By.XPATH,'/html/body/div[3]/main/div[2]/div[2]/div[2]/div/div/div/div[2]/div[1]/div')
 rec_element = element.get_attribute('outerHTML')
 
 
@@ -32,7 +32,7 @@ print_element = printing_element.get_attribute('outerHTML')
 # For Dinning
 driver.get(dinning)
 sleep(2)
-dinning_element = driver.find_element(By.XPATH,'/html/body/div[1]/div[2]/main/div/div/table')
+dinning_element = driver.find_element(By.XPATH,'/html/body/div/div[2]/main/div/div/table')
 dine_element = dinning_element.get_attribute('outerHTML')
 
 
